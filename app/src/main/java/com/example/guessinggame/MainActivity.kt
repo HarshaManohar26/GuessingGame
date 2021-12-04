@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         rightButton.setOnClickListener {
 
-            if (answerGuessed.text.toString().isNullOrEmpty()){
+            if ((answerGuessed.text.toString().isNullOrEmpty()) or (answerGuessed.text.toString().toInt() > 1000)){
                 suggestion.text = "Please enter a number between 0 to 1000"
             }else {
 
