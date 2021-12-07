@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val rightButton = findViewById<TextView>(R.id.questionTV2)
         val suggestion = findViewById<TextView>(R.id.suggestionTV3)
 
-        val randomNum = (0..1000).random()
+        val randomNumber = (0..1000).random()
 
         rightButton.setOnClickListener {
 
@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
 
                 numberEntered = answerGuessed.text.toString().toInt()
 
-                if (numberEntered == randomNum) {
+                if (numberEntered == randomNumber) {
                     suggestion.text = "You are right!"
-                } else if (numberEntered > randomNum) {
+                } else if (numberEntered > randomNumber) {
                     suggestion.text = "No :) My number is smaller"
-                } else if (numberEntered < randomNum) {
+                } else if (numberEntered < randomNumber) {
                     suggestion.text = "No :) My number is bigger"
                 }
 
